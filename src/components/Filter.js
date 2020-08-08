@@ -12,7 +12,6 @@ const Filter = ({data, purpose, processing, filterStatus, handleFilterClick, cat
     const [internalState, setInternalState] = useState(initialState)
 
     const dealCount = filterCards(internalState.data, internalState.purpose, internalState.processing, categories, cards)
-    console.log(dealCount.length)
 
     function isSelected(id) {
         const data = internalState.data.map(dataPill => {
@@ -104,6 +103,7 @@ const Filter = ({data, purpose, processing, filterStatus, handleFilterClick, cat
                     </div>
                 </div>
                 <div className="filterFooter">
+                    <h4>{dealCount.length} Deals gefunden</h4>
                     <button className="cancel" onClick={() => {setInternalState(initialState); handleFilterClick()}}>Abbrechen</button>
                     <button className="apply" onClick={() => {handleFilterClick(internalState)}}>Anwenden</button>
                 </div>
