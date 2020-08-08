@@ -217,7 +217,7 @@ class App extends Component{
       <div className="App content">
         <div className="header" />
         <section className="categoriesScroll">
-          <Categories categories={this.state.categories} isSelected={this.onCategorySelected}  showDealsForCategory={this.showDealsForCategory}/>
+          <Categories categories={this.state.categories} isSelected={this.onCategorySelected}/>
         </section>
         <Cards cards={filteredCards} openDetails={this.openDetails}/>
         <div className="filterButton">
