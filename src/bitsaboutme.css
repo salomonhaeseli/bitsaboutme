@@ -1,0 +1,245 @@
+
+/*----------------------
+Cards of a deal
+------------------------*/
+.cardNormal {
+    position: relative;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: 15px;
+    height: 169px;
+    width: 325px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.cardImage {
+    position: absolute;
+    top: 17px;
+    right: 246px;
+    width: 54px;
+    height: 54px;
+}
+
+.cardPill{
+    position: absolute;
+    left: 99px;
+    top: 21px;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 10px;
+    color: white;
+    line-height: 12px;
+    background: rgba(109, 186, 214, 0.5);
+    border-radius: 5px;
+    padding: 2px 7px 2px 7px;
+}
+
+.cardHeader {
+    left: 99px;
+    top: 41px;
+    position: absolute;
+    width: 191px;
+    height: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.likes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bamRating{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.cardDescription {
+    position: absolute;
+    width: 275px;
+    height: 59px;
+    left: 25px;
+    top: 83px;
+}
+
+/*----------------------
+Categories
+------------------------*/
+.categoriesScroll{
+    height: 80px;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+.categoriesScroll::-webkit-scrollbar {
+    display: none;
+  }
+
+.categories.collection {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.category {
+    width: 54px;
+    height: 77px;
+    margin-left: 20px;
+}
+
+.category .active {
+    background: rgba(109, 186, 214, 0.2);
+}
+
+.category .card {
+    width: 54px;
+    height: 54px;
+    border: 1px solid rgba(109, 186, 214, 0.5);
+    box-sizing: border-box;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category .name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 14px;    
+    text-align: center;
+}
+
+/*----------------------
+Filter button
+------------------------*/
+.filterButton {
+    right: 30px;
+    bottom: 78px;
+    position: fixed;
+}
+
+.floatingButton {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #6DBAD6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*----------------------
+Filter
+------------------------*/
+.pillContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #6DBAD6;
+}
+
+.pill {
+    font-style: normal;
+    font-weight: 350;
+    font-size: 10px;
+    color: black;
+    line-height: 12px;
+    background: white;
+    border-radius: 5px;
+    padding: 6px 7px 6px 7px;
+    margin: 5px;
+}
+
+.active {
+    color: white;
+    background: rgba(109, 186, 214, 0.5);
+}
+
+.apply {
+    width: 97px;
+    height: 45px;
+    background: #6DBAD6;
+    border-radius: 5px;
+    border: 1px solid #6DBAD6;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 20px;
+    text-align: center;
+}
+
+.cancel {
+    width: 97px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: white;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #6DBAD6;
+    box-sizing: border-box;
+    margin-right: 13px;
+}
+
+.filterVisible {
+    display: block;
+  }
+  
+.filterInvisible {
+    display: none;
+  }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.filterContainer {
+    position:fixed;
+    background: white;
+    width: 100%;
+    height: 100%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+
+
+/*----------------------
+Header and footer
+------------------------*/
+
+.header {
+    height: 59px;
+    background: #6DBAD6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.footer {
+    height: 59px;
+    background: #6DBAD6;
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}
+
+.content {
+    padding-top: 59px;
+    padding-bottom: 59px;
+}
