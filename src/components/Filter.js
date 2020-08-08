@@ -71,35 +71,43 @@ const Filter = ({data, purpose, processing, filterStatus, handleFilterClick, cat
 
     return (
         <div className={`filterContainer ${filterStatus[0].isVisible ? "modal filterVisible" : "modal filterInvisible"}`}>
-            <h4>Angebote filtern</h4>
-            <p>Sortieren nach</p>
-            <section className="pillContainer">
-                <span className="pill">Relevanz</span>
-                <span className="pill">Höchster Betrag</span>
-                <span className="pill">Beliebteste</span>
-            </section>
-            <section className="data">
-                <p>Daten</p>
-                <div className="pillContainer">
-                    {dataList}
+            <div className="filterContent">
+                <div className="filterHeader">
+                        <h4>Angebote filtern</h4>
                 </div>
-            </section>
-            <section className="purpose">
-                <p>Zweck</p>
-                <div className="pillContainer">
-                    {purposeList}
+                <div className="filterContentScroll">
+                    <div className="orderBy">
+                        <p>Sortieren nach</p>
+                        <section className="pillContainer">
+                            <span className="pill">Relevanz</span>
+                            <span className="pill">Höchster Betrag</span>
+                            <span className="pill">Beliebteste</span>
+                        </section>
+                    </div>
+                    <div className="data">
+                        <p>Daten</p>
+                        <section className="pillContainer">
+                            {dataList}
+                        </section>
+                    </div>
+                    <div className="purporse">
+                        <p>Zweck</p>
+                        <section className="pillContainer">
+                            {purposeList}
+                        </section>
+                    </div>
+                    <div className="processing">
+                        <p>Bearbeitung</p>
+                        <section className="pillContainer">
+                            {processingList}
+                        </section>
+                    </div>
                 </div>
-            </section>
-            <section className="processing">
-                <p>Bearbeitung</p>
-                <div className="pillContainer">
-                    {processingList}
+                <div className="filterFooter">
+                    <button className="cancel" onClick={() => {setInternalState(initialState); handleFilterClick()}}>Abbrechen</button>
+                    <button className="apply" onClick={() => {handleFilterClick(internalState)}}>Anwenden</button>
                 </div>
-            </section>
-            <section className="bottom">
-                <button className="cancel" onClick={() => {setInternalState(initialState); handleFilterClick()}}>Abbrechen</button>
-                <button className="apply" onClick={() => {handleFilterClick(internalState)}}>Anwenden</button>
-            </section>
+            </div>
         </div>
     )
 }

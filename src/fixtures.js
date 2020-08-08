@@ -8,14 +8,14 @@ import Storck from './images/storck.png'
 export const cards = [
     {
         description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
-        category: 'Direktmarketing',
+        category: 'Für dich',
         praemie: '2 CHF',
         likes: 20,
         bamRating: 4.5,
         image: Egger,
         isVisible: true,
         id: Math.random(),
-        filterProperties: ["Einmaliger Zugriff", "Direktmarketing"]
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
     },
     {
         description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
@@ -26,50 +26,215 @@ export const cards = [
         image: ETH,
         isVisible: true,
         id: Math.random(),
-        filterProperties: ["bi", "ba"]
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
     },
     {
         description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
-        category: 'Newsletter',
+        category: 'Für dich',
         praemie: '9 CHF',
         likes: 20,
         bamRating: 4.0,
         image: Intervista,
         isVisible: true,
         id: Math.random(),
-        filterProperties: ["Einmaliger Zugriff", "Direktmarketing"]
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
     },
     {
         description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
-        category: 'Spenden',
+        category: 'Für dich',
         praemie: '3 CHF',
         likes: 20,
         bamRating: 1.9,
         image: Hug,
         isVisible: true,
         id: Math.random(),
-        filterProperties: ["Einmaliger Zugriff", "Direktmarketing"]
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
     },
     {
         description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
-        category: 'Spenden',
+        category: 'Beliebt',
         praemie: '3 CHF',
         likes: 20,
         bamRating: 1.9,
         image: Sanitas,
         isVisible: true,
         id: Math.random(),
-        filterProperties: ["Einmaliger Zugriff", "Direktmarketing"]
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
     },
     {
         description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
-        category: 'Spenden',
+        category: 'Beliebt',
         praemie: '3 CHF',
         likes: 20,
         bamRating: 1.9,
         image: Storck,
         isVisible: true,
         id: Math.random(),
-        filterProperties: ["Einmaliger Zugriff", "Direktmarketing"]
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Beliebt',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Beliebt',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Newsletter',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Newsletter',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Newsletter',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Guter Zweck',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Guter Zweck',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Guter Zweck',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Guter Zweck',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Guter Zweck',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Einkaufsdaten',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Einkaufsdaten',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Einkaufsdaten',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Einkaufsdaten',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
+    },
+    {
+        description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
+        category: 'Einkaufsdaten',
+        praemie: '3 CHF',
+        likes: 20,
+        bamRating: 1.9,
+        image: Storck,
+        isVisible: true,
+        id: Math.random(),
+        filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
     }
   ]
