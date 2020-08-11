@@ -4,6 +4,8 @@ import CardDetail from './components/CardDetail'
 import Categories from './components/Categories'
 import FilterButton from './components/FilterButton'
 import Filter from './components/Filter'
+import ConfirmationModal from './components/ConfirmationModal'
+import EndScsreen from './components/EndScreen'
 
 import Alle from './images/icons/Alle.svg'
 import Beliebt from './images/icons/Beliebt.svg'
@@ -161,6 +163,15 @@ class App extends Component{
     ],
     filterStatus: [
       {isVisible: false}
+    ],
+    detailStatus: [
+      {isVisible: false}
+    ],
+    confirmationStatus: [
+      {isVisible: false}
+    ],
+    endScreenStatus: [
+      {isVisible: false}
     ]
   }
 
@@ -208,12 +219,26 @@ class App extends Component{
     this.setState(state)
   }
 
+  handleDealAcceptClick = () => {
+    console.log('Deal accepted')
+  }
 
+  handleDealDeclineClick = () => {
+    console.log('Deal declined')
+  }
 
+  handleCloseClick = () => {
+    /*const isVisible = false
+    
+    this.detailStatus.setState({
+      isVisible
+    })*/
+  }
 
+  
   render(){
     const filteredCards = filterCards(this.state.data, this.state.purpose, this.state.processing, this.state.categories, cards)
-
+    const sameDataCards = filterCards(this.state.data, this.state.purpose, this.state.processing, this.state.categories, cards)
     return (
       <div className="App content">
         <div className="header" />
@@ -225,8 +250,10 @@ class App extends Component{
           <FilterButton handleFilterClick={this.handleFilterClick}/>
         </div>
         <Filter data={this.state.data} purpose={this.state.purpose} processing={this.state.processing} filterStatus={this.state.filterStatus} handleFilterClick={this.handleFilterClick} categories={this.state.categories}/>
+        <CardDetail cardDetails={cardDetails} detailStatus={this.state.detailStatus} handleCloseClick={this.handleCloseClick} handleDealAcceptClick={this.handleDealAcceptClick} handleDealDeclineClick={this.handleDealDeclineClick}/>
+        <ConfirmationModal cardDetails={cardDetails} confirmationStatus={this.state.confirmationStatus}/>
+        <EndScsreen sameDataCards={sameDataCards} endScreenStatus={this.state.endScreenStatus} />
         <div className="footer" />
-        <CardDetail cardDetails={cardDetails} />
       </div>
     );
   }
