@@ -5,6 +5,8 @@ import Intervista from './images/intervista.png'
 import Sanitas from './images/sanitas.png'
 import Storck from './images/storck.png'
 
+import UzhLarge from './images/UzhLarge.png'
+
 export const cards = [
     {
         description: 'Präsentiere deinen frisch rasierten Bart oder Beine auf Youtube und erhalte einen Mo...',
@@ -238,3 +240,20 @@ export const cards = [
         filterProperties: ['Persönliche Angaben','Operationen', 'Einmaliger Zugriff']
     }
   ]
+
+  export const cardDetails = [
+    {
+        image: UzhLarge,
+        paymentModel: 'Einmalig',
+        companyName: 'Universität Zürich',
+        shortDescription: 'Abonniere den Möbel Egger Newsletter und erhalte CHF 1 und einen Einkaufsgutschein von CHF 20',
+        trustscore1: '',
+        trustscore2: '',
+        options: ['Zugriffe nur bis zum 31.12.2020 zulassen', 'Maximum 20 Zugriffe zulassen'],
+        sharedData: ['Wohnsitzland: Schweiz'],
+        purpose: ['Deine Daten werden verwendet, um dir persönliche Werbematerialien zuzustellen, z.B. per Post oder E-Mail.'],
+        processing: ['Kontinuierlicher Zugriff'],
+        time: 'Bis 29.05.2029',
+        bedingungen: 'Wir speichern deine Daten, um dir regelmässig Neuigkeiten und Sonderangebote rund um das vielfältige Angebot von Möbel Hubacher zukommen zu lassen. Wenn du deinen Namen und deine E-Mail teilst, erhältst du einmalig CHF 1 in dein BitsaboutMe Konto sowie einen Gutschein in Höhe von CHF 20 für deinen nächsten Einkauf bei Möbel Hubacher (Mindestkaufwert von CHF 60). Den Gutscheincode senden wir dir nach erfolgter Zustimmung per E-Mail zu.'
+        }
+    ]

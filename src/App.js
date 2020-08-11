@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Cards from './components/Cards'
+import CardDetail from './components/CardDetail'
 import Categories from './components/Categories'
 import FilterButton from './components/FilterButton'
 import Filter from './components/Filter'
@@ -11,7 +12,7 @@ import GuterZweck from './images/icons/GuterZweck.svg'
 import Marktforschung from './images/icons/Marktforschung.svg'
 import Newsletter from './images/icons/Newsletter.svg'
 import { clone, filterCards } from './lib'
-import { cards } from './fixtures'
+import { cards, cardDetails } from './fixtures'
 
 
 import './bitsaboutme.css'
@@ -225,6 +226,7 @@ class App extends Component{
         </div>
         <Filter data={this.state.data} purpose={this.state.purpose} processing={this.state.processing} filterStatus={this.state.filterStatus} handleFilterClick={this.handleFilterClick} categories={this.state.categories}/>
         <div className="footer" />
+        <CardDetail cardDetails={cardDetails} />
       </div>
     );
   }
