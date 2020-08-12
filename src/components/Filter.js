@@ -3,7 +3,7 @@ import { clone, filterCards } from "../lib";
 import { cards } from '../fixtures'
 
 
-const Filter = ({data, purpose, processing, filterStatus, handleFilterClick, categories}) => {
+const Filter = ({data, purpose, processing, filterStatus, handleFilterClick, categories, declinedOrAcceptedCards}) => {
     const initialState = {
         data: clone(data),
         purpose: clone(purpose),
@@ -11,7 +11,7 @@ const Filter = ({data, purpose, processing, filterStatus, handleFilterClick, cat
     }
     const [internalState, setInternalState] = useState(initialState)
 
-    const dealCount = filterCards(internalState.data, internalState.purpose, internalState.processing, categories, cards)
+    const dealCount = filterCards(internalState.data, internalState.purpose, internalState.processing, categories, declinedOrAcceptedCards, cards)
 
     function isSelected(id) {
         const data = internalState.data.map(dataPill => {

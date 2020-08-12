@@ -2,7 +2,7 @@ import React from 'react';
 import Sparschwein from '../images/icons/sparschwein.png'
 import Cards from './Cards'
 
-const EndScreen = ({sameDataCards, endScreenStatus}) => {
+const EndScreen = ({card, sameDataCards, endScreenStatus}) => {
     return ( 
        <div className={`endScreenContainer ${endScreenStatus[0].isVisible ? "endScreenVisible":"endScreenInvisible"}`}>
            <div className="endScreenContent">

@@ -1,7 +1,9 @@
 import React from 'react';
+import CloseButton from '../images/icons/closeButton.svg'
 
-const ConfirmationModal = ({cardDetails, confirmationStatus}) => {
-    const detail = cardDetails[0]
+
+const ConfirmationModal = ({card, confirmationStatus, handleAcceptConfirmClick}) => {
+    const detail = card.details
     return ( 
        <div className={`confirmationModalContainer ${confirmationStatus[0].isVisible ? "confirmationModalVisible":"confirmationModalInvisible"}`}>
             <div className="confirmationModalContent">
@@ -14,7 +16,7 @@ const ConfirmationModal = ({cardDetails, confirmationStatus}) => {
                 )}
                 <h4>Dauer</h4>
                 <p>{detail.time}</p>
-                <button className="shareMyDataButton">Bestätigen</button>
+                <button className="shareMyDataButton" onClick={() => handleAcceptConfirmClick(card.id)}>Bestätigen</button>
             </div>
        </div>
     )

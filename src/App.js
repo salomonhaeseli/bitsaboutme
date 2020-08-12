@@ -14,14 +14,13 @@ import GuterZweck from './images/icons/GuterZweck.svg'
 import Marktforschung from './images/icons/Marktforschung.svg'
 import Newsletter from './images/icons/Newsletter.svg'
 import { clone, filterCards } from './lib'
-import { cards, cardDetails } from './fixtures'
+import { cards } from './fixtures'
 
 
 import './bitsaboutme.css'
 
 class App extends Component{
   state= {
-    details: [{}],
     categories: [
       {
         name: 'Alle Deals',
@@ -172,6 +171,9 @@ class App extends Component{
     ],
     endScreenStatus: [
       {isVisible: false}
+    ],
+    declinedOrAcceptedCards: [
+
     ]
   }
 
@@ -186,8 +188,16 @@ class App extends Component{
     */
   }
 
-  openDetails = () => {
-    console.log('hello')
+  openDetails = (id) => {
+    const detailStatus = this.state.detailStatus.map(status => {
+      status.isVisible = true
+      status.cardId = id
+      return status
+    })
+
+    this.setState({
+      detailStatus
+    })
   }
 
   onCategorySelected = (id) => {
@@ -219,26 +229,82 @@ class App extends Component{
     this.setState(state)
   }
 
-  handleDealAcceptClick = () => {
-    console.log('Deal accepted')
+  handleDealAcceptClick = (id) => {
+    const confirmationStatus = this.state.confirmationStatus.map(status => {
+      status.isVisible = true
+      status.cardId = id
+      return status
+    })
+
+    this.setState({
+      confirmationStatus
+    })
   }
 
-  handleDealDeclineClick = () => {
-    console.log('Deal declined')
+  handleAcceptConfirmClick = (id) => {
+    const detailStatus = this.state.detailStatus.map(status => {
+      status.isVisible = false
+      return status
+    })
+    const confirmationStatus = this.state.confirmationStatus.map(status => {
+      status.isVisible = false
+      return status
+    })
+    const endScreenStatus = this.state.endScreenStatus.map(status => {
+      status.isVisible = true
+      status.cardId = id
+      return status
+    })
+
+    this.setState({
+      detailStatus,
+      confirmationStatus,
+      endScreenStatus,
+      declinedOrAcceptedCards: [...this.state.declinedOrAcceptedCards, id]
+    })
+    
+  }
+
+  handleDealDeclineClick = (id) => {
+    const detailStatus = this.state.detailStatus.map(status => {
+      status.isVisible = false
+      return status
+    })
+
+    this.setState({
+      detailStatus,
+      declinedOrAcceptedCards: [...this.state.declinedOrAcceptedCards, id]
+    })
   }
 
   handleCloseClick = () => {
-    /*const isVisible = false
-    
-    this.detailStatus.setState({
-      isVisible
-    })*/
+    const detailStatus = this.state.detailStatus.map(status => {
+      status.isVisible = false
+      return status
+    })
+
+    this.setState({
+      detailStatus
+    })
   }
 
   
   render(){
-    const filteredCards = filterCards(this.state.data, this.state.purpose, this.state.processing, this.state.categories, cards)
-    const sameDataCards = filterCards(this.state.data, this.state.purpose, this.state.processing, this.state.categories, cards)
+    const filteredCards = filterCards(this.state.data, this.state.purpose, this.state.processing, this.state.categories, this.state.declinedOrAcceptedCards,cards)
+
+    const detailsCardId = this.state.detailStatus[0].cardId
+    const detailsCard = detailsCardId ? cards.find(card => card.id === detailsCardId) : cards[0]
+
+    const confirmationdetailsCardId = this.state.confirmationStatus[0].cardId
+    const confirmationdetailsCard = confirmationdetailsCardId ? cards.find(card => card.id === confirmationdetailsCardId) : cards[0]
+
+    const endScreenCardId = this.state.endScreenStatus[0].cardId
+    const endScreenCard = endScreenCardId ? cards.find(card => card.id === detailsCardId) : cards[0]
+    const endScreenCardCategory = this.state.categories.find(category => category.name === endScreenCard.category)
+    
+    
+    const recommendedCards = filterCards(this.state.data, this.state.purpose, this.state.processing, [{...endScreenCardCategory, active: true}], this.state.declinedOrAcceptedCards,cards)
+
     return (
       <div className="App content">
         <div className="header" />
@@ -249,10 +315,10 @@ class App extends Component{
         <div className="filterButton">
           <FilterButton handleFilterClick={this.handleFilterClick}/>
         </div>
-        <Filter data={this.state.data} purpose={this.state.purpose} processing={this.state.processing} filterStatus={this.state.filterStatus} handleFilterClick={this.handleFilterClick} categories={this.state.categories}/>
-        <CardDetail cardDetails={cardDetails} detailStatus={this.state.detailStatus} handleCloseClick={this.handleCloseClick} handleDealAcceptClick={this.handleDealAcceptClick} handleDealDeclineClick={this.handleDealDeclineClick}/>
-        <ConfirmationModal cardDetails={cardDetails} confirmationStatus={this.state.confirmationStatus}/>
-        <EndScsreen sameDataCards={sameDataCards} endScreenStatus={this.state.endScreenStatus} />
+        <Filter data={this.state.data} purpose={this.state.purpose} processing={this.state.processing} filterStatus={this.state.filterStatus} handleFilterClick={this.handleFilterClick} categories={this.state.categories} declinedOrAcceptedCards={this.state.declinedOrAcceptedCards}/>
+        <CardDetail card={detailsCard} detailStatus={this.state.detailStatus} handleCloseClick={this.handleCloseClick} handleDealAcceptClick={this.handleDealAcceptClick} handleDealDeclineClick={this.handleDealDeclineClick}/>
+        <ConfirmationModal card={confirmationdetailsCard} confirmationStatus={this.state.confirmationStatus} handleAcceptConfirmClick={this.handleAcceptConfirmClick}/>
+        <EndScsreen card={endScreenCard} sameDataCards={recommendedCards} endScreenStatus={this.state.endScreenStatus} />
         <div className="footer" />
       </div>
     );

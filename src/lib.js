@@ -1,6 +1,6 @@
 export const clone = original => JSON.parse(JSON.stringify(original))
 
-export const filterCards = (data, purpose, processing, categories, cards) => {
+export const filterCards = (data, purpose, processing, categories, declinedOrAcceptedCards, cards) => {
     const activeCategory = categories.find(c => c.active)
     let filteredCards = activeCategory.name === "Alle Deals" ? cards : cards.filter(card => card.category === activeCategory.name)
 
@@ -19,6 +19,8 @@ export const filterCards = (data, purpose, processing, categories, cards) => {
       }
       return false
     })
+    
+    filteredCards = filteredCards.filter(card => !declinedOrAcceptedCards.includes(card.id))
 
     return filteredCards
   }
