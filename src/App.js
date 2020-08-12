@@ -302,7 +302,6 @@ class App extends Component{
     const endScreenCard = endScreenCardId ? cards.find(card => card.id === detailsCardId) : cards[0]
     const endScreenCardCategory = this.state.categories.find(category => category.name === endScreenCard.category)
     
-    
     const recommendedCards = filterCards(this.state.data, this.state.purpose, this.state.processing, [{...endScreenCardCategory, active: true}], this.state.declinedOrAcceptedCards,cards)
 
     return (

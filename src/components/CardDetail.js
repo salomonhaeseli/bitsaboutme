@@ -9,7 +9,8 @@ const CardDetail = ({card, detailStatus, handleCloseClick, handleDealAcceptClick
             <div className="detailHeader">
                 <img src={cardDetails.image} alt="company of the deal" />
                 <div className="detailLikesAndReward">
-
+                    <p>{card.praemie}</p>
+                    <p>{card.likes}</p>
                 </div>
             </div>
             <div className="detailDescription">

@@ -9,7 +9,7 @@ const EndScreen = ({card, sameDataCards, endScreenStatus}) => {
                <div className="successMessage">
                 <div className="successMessageContent">
                     <img src={Sparschwein} alt="Sparschwein" />
-                    <p>PRÄMIE auf deinem Bitsaboutme Konto gutgeschrieben.</p>
+                    <p>{card.praemie} auf deinem Bitsaboutme Konto gutgeschrieben.</p>
                 </div>
                </div>
                <div className="nextSteps">
