@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-Cone the Project
+Clone the Project
 
 ### `git clone https://github.com/salomonhaeseli/bitsaboutme.git`
 
