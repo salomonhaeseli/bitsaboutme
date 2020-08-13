@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Install node package manager (npm) from https://nodejs.org/en/
+
 Clone the Project
 
 ### `git clone https://github.com/salomonhaeseli/bitsaboutme.git`
