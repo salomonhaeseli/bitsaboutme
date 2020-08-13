@@ -2,7 +2,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+Cone the Project
+
+### `git clone https://github.com/salomonhaeseli/bitsaboutme.git`
+
+In the project directory, install dependecies for react
+
+### `npm intall`
+
+Now you can run:
 
 ### `npm start`
 
