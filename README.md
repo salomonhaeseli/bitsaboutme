@@ -10,7 +10,7 @@ Clone the Project
 
 In the project directory, install dependecies for react
 
-### `npm intall`
+### `npm install`
 
 Now you can run:
 
