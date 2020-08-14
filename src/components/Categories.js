@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Categories = ({categories, isSelected, showDealsForCategory}) => {
+const Categories = ({categories, isSelected}) => {
 
     const categoryList = categories.length ? (
         categories.map(category => {

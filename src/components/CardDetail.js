@@ -5,9 +5,9 @@ const CardDetail = ({card, detailStatus, handleCloseClick, handleDealAcceptClick
     const cardDetails = card.details
     return ( 
         <div className={`cardDetail cardDetailContainer ${detailStatus[0].isVisible ? "cardDetailVisible" : "cardDetailInvisible"}`}>
-            <img classe="closeDealDetail" src={CloseButton} alt="close the deal" onClick={() => {handleCloseClick()}}/>
+            <img className="closeDealDetail" src={CloseButton} alt="close the deal" onClick={() => {handleCloseClick()}}/>
             <div className="detailHeader">
-                <img src={cardDetails.image} alt="company of the deal" />
+                <img className="CompanyLogo" src={cardDetails.image} alt="company of the deal" />
                 <div className="detailLikesAndReward">
                     <p>{card.praemie}</p>
                     <p>{card.likes}</p>

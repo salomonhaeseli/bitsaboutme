@@ -2,11 +2,12 @@ import React from 'react';
 import CloseButton from '../images/icons/closeButton.svg'
 
 
-const ConfirmationModal = ({card, confirmationStatus, handleAcceptConfirmClick}) => {
+const ConfirmationModal = ({card, confirmationStatus, handleAcceptConfirmClick, handleCloseClickModal}) => {
     const detail = card.details
     return ( 
-       <div className={`confirmationModalContainer ${confirmationStatus[0].isVisible ? "confirmationModalVisible":"confirmationModalInvisible"}`}>
-            <div className="confirmationModalContent">
+        <div className="confirmationModalContent">
+        <img className="closeDealDetail" src={CloseButton} alt="close the deal" onClick={() => {handleCloseClickModal()}}/>
+            <div className={`confirmationModalContainer ${confirmationStatus[0].isVisible ? "confirmationModalVisible":"confirmationModalInvisible"}`}>
                 <h4>Diese Daten werden geteilt</h4>
                 {detail.sharedData.map(entry =>
                     <p className="detailEntry">
@@ -18,7 +19,7 @@ const ConfirmationModal = ({card, confirmationStatus, handleAcceptConfirmClick})
                 <p>{detail.time}</p>
                 <button className="shareMyDataButton" onClick={() => handleAcceptConfirmClick(card.id)}>Bestätigen</button>
             </div>
-       </div>
+        </div>
     )
 }
 

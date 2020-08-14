@@ -288,6 +288,28 @@ class App extends Component{
     })
   }
 
+  handleCloseClickModal = () => {
+    const confirmationStatus = this.state.detailStatus.map(status => {
+      status.isVisible = false
+      return status
+    })
+
+    this.setState({
+      confirmationStatus
+    })
+  }
+
+  handleCloseClickEndScreen = () => {
+    const endScreenStatus = this.state.detailStatus.map(status => {
+      status.isVisible = false
+      return status
+    })
+
+    this.setState({
+      endScreenStatus
+    })
+  }
+
   
   render(){
     const filteredCards = filterCards(this.state.data, this.state.purpose, this.state.processing, this.state.categories, this.state.declinedOrAcceptedCards,cards)
@@ -316,8 +338,8 @@ class App extends Component{
         </div>
         <Filter data={this.state.data} purpose={this.state.purpose} processing={this.state.processing} filterStatus={this.state.filterStatus} handleFilterClick={this.handleFilterClick} categories={this.state.categories} declinedOrAcceptedCards={this.state.declinedOrAcceptedCards}/>
         <CardDetail card={detailsCard} detailStatus={this.state.detailStatus} handleCloseClick={this.handleCloseClick} handleDealAcceptClick={this.handleDealAcceptClick} handleDealDeclineClick={this.handleDealDeclineClick}/>
-        <ConfirmationModal card={confirmationdetailsCard} confirmationStatus={this.state.confirmationStatus} handleAcceptConfirmClick={this.handleAcceptConfirmClick}/>
-        <EndScsreen card={endScreenCard} sameDataCards={recommendedCards} endScreenStatus={this.state.endScreenStatus} />
+        <ConfirmationModal card={confirmationdetailsCard} confirmationStatus={this.state.confirmationStatus} handleAcceptConfirmClick={this.handleAcceptConfirmClick} handleCloseClickModal={this.handleCloseClickModal}/>
+        <EndScsreen card={endScreenCard} sameDataCards={recommendedCards} endScreenStatus={this.state.endScreenStatus} handleCloseClickEndScreen={this.handleCloseClickEndScreen}/>
         <div className="footer" />
       </div>
     );

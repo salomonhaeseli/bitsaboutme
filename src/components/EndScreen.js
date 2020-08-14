@@ -1,11 +1,14 @@
 import React from 'react';
 import Sparschwein from '../images/icons/sparschwein.png'
+import CloseButton from '../images/icons/closeButton.svg'
+
 import Cards from './Cards'
 
-const EndScreen = ({card, sameDataCards, endScreenStatus}) => {
+const EndScreen = ({card, sameDataCards, endScreenStatus, handleCloseClickEndScreen}) => {
     return ( 
        <div className={`endScreenContainer ${endScreenStatus[0].isVisible ? "endScreenVisible":"endScreenInvisible"}`}>
-           <div className="endScreenContent">
+            <img className="closeDealDetail" src={CloseButton} alt="close the deal" onClick={() => {handleCloseClickEndScreen()}}/>
+            <div className="endScreenContent">
                <div className="successMessage">
                 <div className="successMessageContent">
                     <img src={Sparschwein} alt="Sparschwein" />
@@ -20,7 +23,7 @@ const EndScreen = ({card, sameDataCards, endScreenStatus}) => {
                 </div>
                </div>
                <div className="sameDataAgain">
-                <h4>Dieselben Daten nochmals teilen</h4>
+                <h4 className="SameDateTitle">Dieselben Daten nochmals teilen</h4>
                 <Cards cards={sameDataCards} />
                </div>
            </div>

@@ -6,19 +6,19 @@ Cards of a deal
     position: relative;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    margin: 15px;
     height: 169px;
-    width: 325px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 10px 10px 10px
 }
 
 .cardImage {
     position: absolute;
     top: 17px;
-    right: 246px;
     width: 54px;
     height: 54px;
 }
@@ -41,7 +41,7 @@ Cards of a deal
     left: 99px;
     top: 41px;
     position: absolute;
-    width: 191px;
+    width: 55%;
     height: 22px;
     display: flex;
     justify-content: space-between;
@@ -64,6 +64,28 @@ Cards of a deal
     height: 59px;
     left: 25px;
     top: 83px;
+}
+
+.detailLikesAndReward{
+    text-align: right;
+    float: right;
+    width: 50%;
+    margin-left: 50%;
+}
+
+.detailHeader{
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+.CompanyLogo{
+    position: absolute;
+}
+
+.cards.collection{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
 }
 
 /*----------------------
@@ -216,7 +238,8 @@ Filter
   }
 
 .filterContent {
-    margin-top: 50%;      
+    position: absolute;
+    bottom: 59px;
     margin-left: 15px;
     margin-right: 15px;
     border-top-left-radius: 25px;
@@ -272,7 +295,6 @@ Deal details
     position: fixed;
     top: 0px;
     left: 0px;
-    width:100%;
     height: 100%;
     background: white;
     overflow: auto;
@@ -280,8 +302,7 @@ Deal details
 }
 
 .cardDetail {
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 0px 10px 10px 10px;
 }
 
 .cardDetailVisible {
@@ -295,15 +316,15 @@ Deal details
 .dealDetailButton {
     width: 100%;
     height: 45px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
     border-radius: 5px;
-    margin: 5px;
+   
 }
 .doNotShowAgain {
     color: #0B191E;
@@ -320,8 +341,10 @@ Deal details
 
 .detailBox{
     background-color: #E3E7EE;
-    margin: 13px 10px 13px 10px;
-    padding: 13px 10px 13px 10px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    padding: 10px 20px 10px 20px;
+
 }
 
 .detailImage {
@@ -329,9 +352,8 @@ Deal details
 }
 
 .closeDealDetail {
-    position: absolute;
-    right: 0px;
-    top: 0px;
+    margin-top: 10px;
+    float: right;
 }
 
 .acceptDeal {
@@ -356,7 +378,9 @@ Confirmation modal
 
 .confirmationModalContent{
     padding: 25px;
+    margin: 20px;
     background: white;
+   
 }
 .shareMyDataButton {
   height: 45px;
@@ -370,6 +394,7 @@ Confirmation modal
   font-weight: 400;
   font-style: normal;
   text-align: center;
+  border: none;
 }
 
 .confirmationModalVisible {
@@ -385,6 +410,13 @@ Success Message
 ------------------------*/
 .endScreenVisible {
     display: block;
+    position: fixed;
+    top: 0px;
+    background: white;
+    z-index: 1;
+    width: 100%;
+
+
 }
 
 .endScreenInvisible{
@@ -411,18 +443,23 @@ Success Message
     text-align: center; 
     position: absolute;
     height: 158px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .nextSteps {
     height: 130px;
     border-bottom: 3px solid rgba(109, 186, 214);
+    width: 80%;
+    margin-left: 10%;
 }
 
 .sameDataAgain{
     height: 30%;
     overflow: auto;
+}
+
+.SameDateTitle{
+    width: 80%;
+    margin-left: 10%;
 }
 
 /*----------------------
@@ -450,3 +487,4 @@ Header and footer
     padding-top: 59px;
     padding-bottom: 59px;
 }
+
