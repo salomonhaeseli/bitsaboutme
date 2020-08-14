@@ -7,7 +7,7 @@ import Cards from './Cards'
 const EndScreen = ({card, sameDataCards, endScreenStatus, handleCloseClickEndScreen}) => {
     return ( 
        <div className={`endScreenContainer ${endScreenStatus[0].isVisible ? "endScreenVisible":"endScreenInvisible"}`}>
-            <img className="closeDealDetail" src={CloseButton} alt="close the deal" onClick={() => {handleCloseClickEndScreen()}}/>
+            <img className="closeDealDetail SucessScreen" src={CloseButton} alt="close the deal" onClick={() => {handleCloseClickEndScreen()}}/>
             <div className="endScreenContent">
                <div className="successMessage">
                 <div className="successMessageContent">

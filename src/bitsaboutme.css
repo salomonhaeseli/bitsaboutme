@@ -356,6 +356,9 @@ Deal details
     float: right;
 }
 
+
+
+
 .acceptDeal {
     position: sticky;
     bottom: 0px;
@@ -408,6 +411,16 @@ Confirmation modal
 /*----------------------
 Success Message
 ------------------------*/
+
+.closeDealDetail.SucessScreen {
+    margin-top: 15px;
+    position: absolute;
+    margin-left: 85%;
+    z-index: 1;
+
+}
+
+
 .endScreenVisible {
     display: block;
     position: fixed;
